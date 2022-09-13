@@ -1,0 +1,19 @@
+
+<%
+ if (items) {  var cards = '';
+//<!-- Iterate the items object & update the cards variable -->
+  items.forEach(function(item) {  
+         cards += 
+         '<div class="card" style="width: 18rem;"><div class="card-body"><h4 class="card-title">'
+          +'  <img class="card-img-top" src="'+item.artworkUrl100+'" alt="Card image cap">'
+          +'<p>'+item.trackName+'</p>'
+         +'<a href="'+item.artistViewUrl+'" class="btn btn-primary">Artist website</a>'+
+          '<a  class="btn btn-primary" data-toggle="modal" data-target="#myModal" >add review</a>'+
+                '</h4><h6>Link to itunes website:</h6><a href="'+item.trackViewUrl+'" class="btn btn-info" font-size=13px>'+ item.trackViewUrl+
+                          '</a><p>Name:<p><p>'+item.artistName+'<p></p><p>Genre:<p><p>'+item.primaryGenreName+'<p><p>Release Date:</p><p>'+item.releaseDate+'</p></div></div>' 
+                          }); %>
+                            <%- cards %><% } %>
+                    
+                              
+                      
+                          
